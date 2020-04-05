@@ -1,0 +1,39 @@
+a
+{
+	text-decoration: none;
+}
+
+div.menu_ngang a 
+{
+	color:blue;
+	margin-left: 15px;
+	margin-right: 15px;
+	text-decoration: none;
+	font-size:20px;
+}
+div.menu_ngang a:hover
+{
+	color:red;
+}
+div.menu_doc a 
+{
+	color:red;
+	text-decoration: none;
+	display:block;
+}
+div.menu_doc a:hover
+{
+	color:red
+}
+div.phan_trang a 
+{
+	font-size:36px;
+	margin-left:5px;
+	margin-right:5px;
+	text-decoration: none;
+	color:red;
+}
+div.phan_trang a:hover 
+{
+	color:red
+}
