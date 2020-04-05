@@ -2,11 +2,17 @@
 Sản phẩm của chúng tôi 
 <br><br>
 <?php 
-	
+	$host='localhost';
+	$user='root';
+	$pass='';
+	$db='ban_hang';
+	//error_reporting(0);//Chan thong bao loi
+
+	$link=mysqli_connect($host,$user,$pass,$db) or die('Lỗi kết nối');
 	$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham where trang_chu='co' order by sap_xep_trang_chu desc limit 0,15";
-	$tv_1=mysql_query($tv);
+	$tv_1=mysqli_query($link,$tv);
 	echo "<table>";
-	while($tv_2=mysql_fetch_array($tv_1))
+	while($tv_2=mysqli_fetch_array($tv_1))
 	{
 		echo "<tr>";
 			for($i=1;$i<=3;$i++)
@@ -38,7 +44,7 @@ Sản phẩm của chúng tôi
 				echo "</td>";
 				if($i!=3)
 				{
-					$tv_2=mysql_fetch_array($tv_1);
+					$tv_2=mysqli_fetch_array($tv_1);
 				}
 			}
 		echo "</tr>";

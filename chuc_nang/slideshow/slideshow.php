@@ -4,9 +4,16 @@
 <center>
 <div class="slideshow" id="slideshow" >
 	<?php 
+	$host='localhost';
+	$user='root';
+	$pass='';
+	$db='ban_hang';
+	//error_reporting(0);//Chan thong bao loi
+
+	$link=mysqli_connect($host,$user,$pass,$db) or die('Lỗi kết nối');
 		$tv="select hinh,lien_ket from slideshow order by id";
-		$tv_1=mysql_query($tv);
-		while($tv_2=mysql_fetch_array($tv_1))
+		$tv_1=mysqli_query($link,$tv);
+		while($tv_2=mysqli_fetch_array($tv_1))
 		{
 			$link_hinh="hinh_anh/slideshow/".$tv_2['hinh'];
 			echo "<a href='".$tv_2['lien_ket']."'>";
